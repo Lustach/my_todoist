@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_todoist/models/menu_navigation.dart';
+import 'package:my_todoist/pages/today.dart';
 import 'package:provider/provider.dart';
 import 'package:my_todoist/widgets/appBar.dart';
 
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
+                        margin: EdgeInsets.only(right: 15.0),
                         width: 50.0,
                         height: 50.0,
                         decoration: new BoxDecoration(
@@ -67,6 +69,8 @@ class MyApp extends StatelessWidget {
                       leading: Icon(value.icon),
                       title: Text(value.title),
                       onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Today()));
                         // Navigator.pop(context);
                       },
                       // tileColor: value.color,
@@ -79,6 +83,8 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Today()));
             // Add your onPressed code here!
           },
           child: Icon(Icons.add),
@@ -103,10 +109,11 @@ class MyApp extends StatelessWidget {
       //   visualDensity: VisualDensity.adaptivePlatformDensity,
       // ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
       routes: {
         // '/incoming' : (BuildContext context) => Incoming(),
         // '/forthcoming' : (BuildContext context) => Forthcoming(),
-        // '/today' : (BuildContext context) => Today(),
+        '/today': (BuildContext context) => Today(),
       },
     );
   }

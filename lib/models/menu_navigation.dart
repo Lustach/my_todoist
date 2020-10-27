@@ -16,17 +16,17 @@ class MenuNavigation {
         title: 'Входящие',
         routeName: '/incoming',
         color: Colors.blue,
-        icon: Icons.panorama_horizontal),
+        icon: Icons.calendar_today),
     Tile(
         title: 'Сегодня',
         routeName: '/today',
         color: Colors.blue,
-        icon: Icons.panorama_horizontal),
+        icon: Icons.today),
     Tile(
         title: 'Предстоящее',
         routeName: '/forthcoming',
         color: Colors.blue,
-        icon: Icons.panorama_horizontal)
+        icon: Icons.date_range)
   ];
   UnmodifiableListView<Tile> get items => UnmodifiableListView(_items);
   Tile getElementById(String title) =>
