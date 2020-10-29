@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_todoist/widgets/popUpMenu.dart';
 
 Widget myAppBar(String title) {
   return AppBar(
     backgroundColor: Colors.orange[600],
     //background color of Appbar to green
     title: Text(title),
+    // automaticallyImplyLeading: false,
     leading: Builder(
       builder: (BuildContext context) {
         return IconButton(
@@ -24,12 +26,13 @@ Widget myAppBar(String title) {
           //action for search icon button
         },
       ),
-      IconButton(
-        icon: Icon(Icons.person),
-        onPressed: () {
-          //action for user icon button
-        },
-      )
+      PopUpOptionMenu(), //
+      // IconButton(
+      //   icon: Icon(Icons.more_vert),
+      //   onPressed: () {
+      //     //action for user icon button
+      //   },
+      // )
     ],
   );
 }
