@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: myAppBar("Home Page"),
+        appBar: MyAppBar(),
         drawer: myDrawer(),
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, "/today"), //dont work

@@ -38,7 +38,7 @@ class MenuNavigation {
         routeName: '/forthcoming',
         color: Colors.blue,
         icon: Icons.date_range,
-        page: ForthComing())
+        page: ForthComing()),
   ];
   UnmodifiableListView<Tile> get items => UnmodifiableListView(_items);
   Tile getElementById(String title) =>

@@ -8,7 +8,7 @@ class Today extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar("Сегодня"),
+      appBar: MyAppBar(title: "Сегодня!!!"),
       drawer: myDrawer(),
       body: Container(child: Text('Страничка сегодня')),
     );
