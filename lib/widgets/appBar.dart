@@ -6,7 +6,7 @@ class MyAppBar extends StatefulWidget implements PreferredSizeWidget {
   MyAppBar({Key key, this.title: 'justforescapeerrors'})
       : preferredSize = Size.fromHeight(kToolbarHeight),
         super(key: key);
-  String title;
+  final String title;
   final Size preferredSize; // default is 56.0
   @override
   _MyAppBarState createState() => _MyAppBarState(title);

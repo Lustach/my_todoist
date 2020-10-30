@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_todoist/widgets/appBar.dart';
+import 'package:my_todoist/widgets/drawer.dart';
 
 class ForthComing extends StatelessWidget {
   // const Today({Key key}) : super(key: key);
@@ -6,8 +8,9 @@ class ForthComing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Предстоящее')),
-      body: Center(child: Text('Страничка предстоящее')),
+      appBar: MyAppBar(title: "Предстоящее"),
+      drawer: myDrawer(),
+      body: Container(child: Text('Страничка предстоящее')),
     );
   }
 }
