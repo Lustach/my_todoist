@@ -12,7 +12,6 @@ class Today extends StatelessWidget {
       appBar: MyAppBar(title: "Сегодня!!!"),
       drawer: myDrawer(),
       body: TodoList(),
-      // body: Container(child: Text('Страничка сегодня')),
     );
   }
 }

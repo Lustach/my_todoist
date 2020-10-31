@@ -27,7 +27,6 @@ class _MyAppBarState extends State<MyAppBar> {
     setState(() {
       if (this.searchBtn.icon == Icons.search) {
         this.searchBtn = new Icon(Icons.close);
-        // widget.title= new TextField(autofocus: true,)
         appBarTitle = new TextField(
             autofocus: true,
             cursorColor: Color(0xFFFAF2FB),
@@ -45,11 +44,6 @@ class _MyAppBarState extends State<MyAppBar> {
       }
     });
   }
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Widget appBarTitle = Text(widget.title);
-  // }
 
   @override
   Widget build(
@@ -91,7 +85,6 @@ class _MyAppBarState extends State<MyAppBar> {
 Widget myAppBar(String title) {
   return AppBar(
     backgroundColor: Colors.orange[600],
-    //background color of Appbar to green
     title: Text(title),
     // automaticallyImplyLeading: false,
     leading: Builder(
@@ -136,21 +129,3 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return AppBar(title: Text("Sample App Bar"));
   }
 }
-
-// class MyHomePage extends StatefulWidget implements PreferredSizeWidget {
-//   @override
-//   _MyHomePageState createState() => _MyHomePageState();
-
-//   @override
-//   // TODO: implement preferredSize
-//   Size get preferredSize => throw UnimplementedError();
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: myAppBar('АЛЛЛО'),
-//     );
-//   }
-// }
